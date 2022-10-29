@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Roniell Pérez" />
+    <meta name="description" content="A page that generates a simple CV" />
+    <link
+      rel="stylesheet"
+      href="./src/styles/css/libs/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles/css/styles.css" />
+    <link rel="shortcut icon" href="./src/assets/images/icon.png" />
+    <title>Roniell&apos;s CV Generator</title>
+  </head>
+  <body>
+    <header class="header container-fluid">
+      <div class="container header__content">
+        <a class="header__logo" href="">
+          <img src="./src/assets/images/icon.png" alt="logo" />
+          <label>CV Generator</label>
+        </a>
+        <nav class="header__nav">
+          <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="./src/pages/about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="home">
+      <div class="home__title">
+        <h1 class="mt-5 mb-0 text-center">Generate your Curriculum Vitae</h1>
+        <div class="title-underline mb-5"></div>
+      </div>
+      <form class="home__form rounded container">
+        <div class="home__form__pic">
+          <label for="user-pic"
+            ><div>
+              <img
+                src="./src/assets/images/addPicture.png"
+                alt="add image logo"
+              />
+              Add picture
+            </div>
+          </label>
+          <span class="rounded bg-light" id="selected-pic"
+            >image.extension</span
+          >
+          <input type="file" accept="image/*" class="d-none" id="user-pic" />
+        </div>
+        <div class="home__form__group mt-2">
+          <label for="name">Name</label>
+          <input type="text" class="rounded" id="name" placeholder="Name..." />
+        </div>
+        <div class="home__form__group mt-2">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            class="rounded"
+            id="address"
+            placeholder="Address..."
+          />
+        </div>
+        <div class="home__form__group mt-2">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="rounded"
+            id="email"
+            placeholder="username@domain.cc"
+          />
+        </div>
+        <div class="home__form__group mt-2">
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            class="rounded"
+            id="phone"
+            placeholder="0000000000"
+          />
+        </div>
+        <div class="home__form__group mt-2">
+          <label for="website">Website URL</label>
+          <input
+            type="text"
+            class="rounded"
+            id="website"
+            placeholder="mywebsite.com"
+          />
+        </div>
+        <div class="textarea-grid">
+          <div class="home__form__group mt-2">
+            <label for="languages">Languages (Separated by comma)</label>
+            <textarea
+              class="rounded"
+              id="languages"
+              placeholder="English, Spanish, French, Kugo"
+            ></textarea>
+          </div>
+          <div class="home__form__group mt-2">
+            <label for="summary">Summary</label>
+            <textarea
+              class="rounded"
+              id="summary"
+              placeholder="Write a bit about yourself..."
+            ></textarea>
+          </div>
+          <div class="home__form__group mt-2">
+            <label for="skills">Skills (Separated by comma)</label>
+            <textarea
+              class="rounded"
+              id="skills"
+              placeholder="Problem-solving abilities, Leadership skills, Programming"
+            ></textarea>
+          </div>
+          <div class="home__form__group mt-2">
+            <label for="jobs">Jobs (Separated by comma)</label>
+            <textarea
+              class="rounded"
+              id="jobs"
+              placeholder="Teacher, Software developer, Marketing Manager"
+            ></textarea>
+          </div>
+          <div class="home__form__group mt-2">
+            <label for="education">Education (Separated by comma)</label>
+            <textarea
+              class="rounded"
+              id="education"
+              placeholder="High school Diploma - 2011 Moray, Bachelor of science: Computer Science - 2018 UASD"
+            ></textarea>
+          </div>
+          <div class="home__form__group mt-2">
+            <label for="certifications"
+              >Certifications (Separated by comma)</label
+            >
+            <textarea
+              class="rounded"
+              id="certifications"
+              placeholder="Professional achievement in Data Science, PMP"
+            ></textarea>
+          </div>
+        </div>
+        <button
+          class="btn btn-primary mt-2"
+          id="submit-btn"
+          data-dismiss="alert"
+          type="button"
+        >
+          Generate
+        </button>
+      </form>
+      <div class="alert alert-danger container mt-2 opacity-0" role="alert">
+        You must complete all the fields.
+      </div>
+      <article class="home__cv mb-5 container" id="cv-container"></article>
+    </main>
+  </body>
+  <script src="./src/js/index.js" type="module"></script>
+  <script src="./src/js/libs/bootstrap/bootstrap.min.js"></script>
+</html>

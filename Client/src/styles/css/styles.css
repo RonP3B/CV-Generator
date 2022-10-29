@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Knewave&display=swap");
+body {
+  font-family: "Baloo 2", cursive;
+  background-color: #caf0f8;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width: 768px) {
+  .textarea-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .min-hgt {
+    min-height: 47rem;
+  }
+}
+.alert {
+  transition: opacity 0.65s linear;
+  cursor: default;
+}
+
+.title-underline {
+  margin: auto;
+  height: 0.22rem;
+  width: 12rem;
+  background-color: #457b9d;
+}
+
+.header {
+  background-color: #ccdbdc;
+  box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.61);
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.header__logo img {
+  height: 2.8rem;
+}
+.header__logo label {
+  font-family: "Knewave", cursive;
+  font-size: 1rem;
+  color: #457b9d;
+  cursor: pointer;
+}
+.header__nav li {
+  margin-left: 0.85rem;
+  font-weight: 800;
+}
+.header__nav li a {
+  color: #457b9d;
+  font-size: 1.02rem;
+  transition: color 0.2s linear;
+}
+.header__nav li a:hover {
+  color: #5ea6d6;
+}
+@media screen and (min-width: 450px) {
+  .header__logo img {
+    height: 3rem;
+  }
+  .header__logo label {
+    font-size: 1.1rem;
+  }
+  .header__nav li a {
+    font-size: 1.05rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo img {
+    height: 3.2rem;
+  }
+  .header__logo label {
+    font-size: 1.3rem;
+  }
+  .header__nav li a {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo img {
+    height: 3.3rem;
+  }
+  .header__logo label {
+    font-size: 1.4rem;
+  }
+  .header__nav li a {
+    font-size: 1.35rem;
+  }
+}
+
+.home {
+  padding: 0 0.75rem;
+}
+.home__title h1 {
+  color: #457b9d;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.home__form, .home__cv {
+  background-color: #ccdbdc;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  word-break: break-word;
+}
+.home__form {
+  padding: 0.5rem;
+}
+.home__form__pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home__form__pic label div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  border: 3px dashed #457b9d;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #457b9d;
+  font-weight: 700;
+  transition: background-color 0.2s linear;
+}
+.home__form__pic label div:hover {
+  background-color: #e1e8ee;
+}
+.home__form__pic label div img {
+  margin: 0 auto;
+  height: 3rem;
+}
+.home__form__pic span {
+  display: inline-block;
+  width: 60%;
+  color: #457b9d;
+  font-weight: 600;
+  border: 2px solid #457b9d;
+  padding: 0.15rem 0.25rem;
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
+  overflow: hidden;
+}
+.home__form__group label {
+  color: #457b9d;
+  font-weight: 500;
+}
+.home__form__group input::placeholder,
+.home__form__group textarea::placeholder {
+  color: #457b9de8;
+  font-weight: 500;
+}
+.home__form__group input,
+.home__form__group label,
+.home__form__group textarea {
+  font-size: 0.9rem;
+}
+.home__form__group input,
+.home__form__group textarea {
+  display: block;
+  color: #457b9d;
+  width: 100%;
+  font-weight: 600;
+  padding: 0.15rem 0.25rem;
+  border: 2px solid #457b9d;
+  outline-color: #5ea6d6;
+}
+.home__form__group label {
+  font-weight: 600;
+}
+.home__form__group textarea {
+  resize: none;
+  height: 5rem;
+}
+.home__form button {
+  width: 100%;
+  color: #ffffff;
+  background-color: #457b9d;
+  border-color: #325a72;
+  padding: 0.275rem 0.65rem;
+}
+.home__form button:hover {
+  background-color: #325a72;
+}
+.home__cv section {
+  padding: 0;
+}
+.home__cv__blue-block {
+  height: 3rem;
+  display: block;
+  background-color: #457b9d;
+  width: 100%;
+}
+.home__cv__content {
+  padding: 0 1.35rem;
+}
+.home__cv__content h5,
+.home__cv__content h3,
+.home__cv__content h2 {
+  color: #457b9d;
+  font-weight: 700;
+}
+.home__cv__content h3,
+.home__cv__content h2 {
+  margin-top: 1rem;
+}
+.home__cv__content h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.home__cv__content h3 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #457b9d;
+}
+.home__cv__content img {
+  border-radius: 100%;
+  height: 10rem;
+  max-width: 10rem;
+  display: block;
+  margin: 0 auto;
+}
+.home__cv__content h5,
+.home__cv__content p,
+.home__cv__content li {
+  font-size: 0.9rem;
+}
+.home__cv__content h5 {
+  margin-bottom: 0;
+}
+.home__cv__content p,
+.home__cv__content li {
+  color: #457b9de8;
+  font-weight: 500;
+}
+.home__cv__content__grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+.home__cv__content__no-list {
+  list-style: none;
+  padding-left: 0.2rem;
+}
+@media screen and (min-width: 450px) {
+  .home__title h1 {
+    font-size: 1.5rem;
+  }
+  .home__form__pic span {
+    font-size: 1rem;
+  }
+  .home__form__pic label div {
+    width: 110px;
+    height: 110px;
+    font-size: 1rem;
+  }
+  .home__form__pic label div img {
+    height: 3.1rem;
+  }
+  .home__form__group input,
+.home__form__group label,
+.home__form__group textarea {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home__title h1 {
+    font-size: 1.9rem;
+  }
+  .home__form__pic span {
+    font-size: 1.1rem;
+  }
+  .home__form__pic label div {
+    width: 120px;
+    height: 120px;
+    font-size: 1.1rem;
+  }
+  .home__form__pic label div img {
+    height: 3.2rem;
+  }
+  .home__form__group input,
+.home__form__group label,
+.home__form__group textarea {
+    font-size: 1.1rem;
+  }
+  .home__form button {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .home #cv-container > div > section.col-12.col-md-8 > div > div:nth-child(1) > h3 {
+    margin-top: 4rem;
+  }
+  .home__cv__content h2 {
+    font-size: 1.7rem;
+  }
+  .home__cv__content h3 {
+    font-size: 1.3rem;
+  }
+  .home__cv__content h5,
+.home__cv__content p,
+.home__cv__content li {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home__title h1 {
+    font-size: 2.2rem;
+  }
+  .home__form__pic span {
+    font-size: 1.2rem;
+  }
+  .home__form__pic label div {
+    width: 125px;
+    height: 125px;
+    font-size: 1.2rem;
+  }
+  .home__form__pic label div img {
+    height: 3.25rem;
+  }
+  .home__form__group input,
+.home__form__group label,
+.home__form__group textarea {
+    font-size: 1.2rem;
+  }
+  .home__form button {
+    width: 70%;
+  }
+  .home__cv__content h2 {
+    font-size: 1.8rem;
+  }
+  .home__cv__content h3 {
+    font-size: 1.4rem;
+  }
+  .home__cv__content h5,
+.home__cv__content p,
+.home__cv__content li {
+    font-size: 1.1rem;
+  }
+}
+
+.about {
+  color: #457b9d;
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 67px);
+}
+.about__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.about__info {
+  font-weight: 600;
+}
+.about img {
+  height: 10rem;
+}
+@media screen and (min-width: 450px) {
+  .about__title {
+    font-size: 1.9rem;
+  }
+  .about__info {
+    font-size: 1.1rem;
+  }
+  .about img {
+    height: 12rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    font-size: 2.1rem;
+  }
+  .about__info {
+    font-size: 1.2rem;
+  }
+  .about img {
+    height: 14rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__title {
+    font-size: 2.3rem;
+  }
+  .about__info {
+    font-size: 1.3rem;
+  }
+  .about img {
+    height: 16rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
